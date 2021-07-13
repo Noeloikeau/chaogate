@@ -10,8 +10,8 @@ entries:
       title: Overview
       url: /
     - output: web,pdf
-      title: functions
-      url: functions.html
+      title: core
+      url: core.html
     output: web
     title: chaogate
   output: web

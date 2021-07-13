@@ -1,6 +1,6 @@
 {
   "chaogate": {
     "Overview": "/",
-    "functions": "functions.html"
+    "core": "core.html"
   }
 }

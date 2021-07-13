@@ -2,22 +2,22 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"global_path": "00_functions.ipynb",
-         "chaogate": "00_functions.ipynb",
-         "tup2ar": "00_functions.ipynb",
-         "chaogate.Vin_tup": "00_functions.ipynb",
-         "chaogate.Vin_ar": "00_functions.ipynb",
-         "chaogate.Vin_slice": "00_functions.ipynb",
-         "sweep": "00_functions.ipynb",
-         "iterate_map": "00_functions.ipynb",
-         "iterate": "00_functions.ipynb",
-         "lyapunov": "00_functions.ipynb",
-         "grid": "00_functions.ipynb",
-         "bifurcate": "00_functions.ipynb",
-         "booleanize_ar": "00_functions.ipynb",
-         "booleanize": "00_functions.ipynb",
-         "boolean_gradient": "00_functions.ipynb",
-         "boolean_divergence": "00_functions.ipynb"}
+index = {"global_path": "00_core.ipynb",
+         "chaogate": "00_core.ipynb",
+         "tup2ar": "00_core.ipynb",
+         "chaogate.Vin_tup": "00_core.ipynb",
+         "chaogate.Vin_ar": "00_core.ipynb",
+         "chaogate.Vin_slice": "00_core.ipynb",
+         "sweep": "00_core.ipynb",
+         "iterate_map": "00_core.ipynb",
+         "iterate": "00_core.ipynb",
+         "lyapunov": "00_core.ipynb",
+         "grid": "00_core.ipynb",
+         "bifurcate": "00_core.ipynb",
+         "booleanize_ar": "00_core.ipynb",
+         "booleanize": "00_core.ipynb",
+         "boolean_gradient": "00_core.ipynb",
+         "boolean_divergence": "00_core.ipynb"}
 
 modules = ["core.py"]
 
