@@ -262,14 +262,14 @@ def print_xar(x):
     def a_1(a):
         try:
             l=len(a//2)
-            res=str(np.around(np.ravel(a),4)[:l if l<4 else 4])[:-1]
+            res=str(np.around(np.ravel(a),4)[:l if l<3 else 3])[:-1]
         except:
             res=str(np.around(a,4))
         return res
     def a_2(a):
         try:
             l=len(a//2)
-            res=str(np.around(np.ravel(a),4)[-len(a//2) if len(a//2)<4 else -4:])[1:]
+            res=str(np.around(np.ravel(a),4)[-len(a//2) if len(a//2)<3 else -3:])[1:]
         except:
             res=str(np.around(a,4))
         return res
@@ -410,8 +410,8 @@ def grid(**kwargs):
 
     #loop over ndindex of outer loops, call inner as sweep
     #use tqdm as progress bar, give total length of outer loop
-    for s in tqdm(np.ndindex(arr.shape[:-n_inner_loops]),
-                  total=np.prod(arr.shape[:-n_inner_loops])):
+    for s in np.ndindex(arr.shape[:-n_inner_loops]):#tqdm(np.ndindex(arr.shape[:-n_inner_loops]),
+                  #total=np.prod(arr.shape[:-n_inner_loops])):
 
         #index static args and feed to chaogate netlist
         static_args={k:v[s[i]] for i,(k,v) in enumerate(static_arg_list)}
