@@ -36,7 +36,7 @@ plot_sweep(s1,ncurves=10)
 plot_sweep(s2,ncurves=10)
 ```
 
-    sweep : Elapsed time: 0.3116 seconds
+    sweep : Elapsed time: 0.2908 seconds
     
 
 
@@ -57,8 +57,14 @@ We can calculate these quantities over entire regions of parameter space with fu
 g=bifurcate(Vbias=(0,1.2,0.01),Vdd=(1.15,1.25,0.001),as_grid=True)
 ```
 
-    grid : Elapsed time: 29.5447 seconds
-    iterate_map : Elapsed time: 5.9907 seconds
+    grid : Elapsed time: 22.8706 seconds
+    
+
+    C:\Anaconda3\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
+      return f(*args, **kwds)
+    
+
+    iterate_map : Elapsed time: 10.1664 seconds
     
 
 ```python
@@ -79,7 +85,7 @@ plt.colorbar()
 
 
 
-    <matplotlib.colorbar.Colorbar at 0x255f89bae88>
+    <matplotlib.colorbar.Colorbar at 0x1994a8755c8>
 
 
 
@@ -87,7 +93,7 @@ plt.colorbar()
 ![png](docs/images/output_11_1.png)
 
 
-We can quickly compare the difference between the desired chaotic properties (positive $\lambda$), and the undesirable properties (the boolean divergence) by taking a linear combination such as:
+We can quickly compare the difference between the desired chaotic properties (positive lyapunov), and the undesirable properties (the boolean divergence) by taking a linear combination such as:
 
 ```python
 normalized_lyapunov = (g.lyapunov.data>0)*g.lyapunov.data/np.max(g.lyapunov.data)
@@ -100,7 +106,7 @@ plt.colorbar()
 
 
 
-    <matplotlib.colorbar.Colorbar at 0x255f4b6be48>
+    <matplotlib.colorbar.Colorbar at 0x1994a714288>
 
 
 
