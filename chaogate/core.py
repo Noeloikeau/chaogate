@@ -42,12 +42,12 @@ def chaogate(path : str = global_path,
              Vdd : float = 1.2,
              Vin : Optional[float] = 0.45,
              Vbias : float = 0.45,
-             w1 = 120e-9,
-             w2 = 120e-9,
-             w3 = 2000e-9,
-             l1 = 65e-9,
-             l2 = 65e-9,
-             l3 = 65e-9,
+             w1 : int = 120e-9,
+             w2 : int = 120e-9,
+             w3 : int = 2000e-9,
+             l1 : int = 65e-9,
+             l2 : int = 65e-9,
+             l3 : int = 65e-9,
              capacitance : int = 1e-15,
              noise : Optional[float] = 0,
              noise_type : str = 'gaussian',
@@ -77,9 +77,9 @@ def chaogate(path : str = global_path,
 
         `vbias` : bias voltage in Volts. This changes the MOSFET behavior.
 
-        `widths` : MOSFET widths of the three transistors in Meters
+        `w1,w2,w3` : MOSFET widths of the three transistors in Meters
 
-        `lengths` : MOSFET lengths of the three transistors in Meters
+        `l1,l2,l3` : MOSFET lengths of the three transistors in Meters
 
         `capacitance` : capacitor constant in Farads
     '''
@@ -101,7 +101,7 @@ def chaogate(path : str = global_path,
         circuit.V('dd','vdd', circuit.gnd, u_V(Vdd))
     else: #implement random variation of source voltage
         circuit.RandomVoltageSource('dd','vdd', circuit.gnd,
-                                    random_type='gaussian',
+                                    random_type=noise_type,
                                     duration=noise_duration,
                                     time_delay=noise_delay,
                                     parameter1=noise,
@@ -253,6 +253,7 @@ def sweep(*funcs,
 
 # Cell
 def print_xar(x):
+    'Tidies up the representation of xarrays for html.'
     if not isinstance(x,xr.core.dataset.Dataset):
         s=x.to_dataset()
     else:
