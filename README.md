@@ -36,7 +36,7 @@ plot_sweep(s1,ncurves=10)
 plot_sweep(s2,ncurves=10)
 ```
 
-    sweep : Elapsed time: 0.2908 seconds
+    sweep : Elapsed time: 0.3080 seconds
     
 
 
@@ -57,23 +57,9 @@ We can calculate these quantities over entire regions of parameter space with fu
 g=bifurcate(Vbias=(0,1.2,0.01),Vdd=(1.15,1.25,0.001),as_grid=True)
 ```
 
-    grid : Elapsed time: 22.8706 seconds
-    
-
-    C:\Anaconda3\lib\importlib\_bootstrap.py:219: RuntimeWarning: numpy.ufunc size changed, may indicate binary incompatibility. Expected 192 from C header, got 216 from PyObject
-      return f(*args, **kwds)
-    
-
-    iterate_map : Elapsed time: 10.1664 seconds
-    
-
 ```python
 plot_bifurcate(itr=g.iterate.sel(Vdd=1.2),lya=g.lyapunov.sel(Vdd=1.2))
 ```
-
-
-![png](docs/images/output_10_0.png)
-
 
 ```python
 grad = boolean_gradient(g.iterate)
@@ -81,17 +67,6 @@ div = boolean_divergence(grad)
 plt.matshow(div)
 plt.colorbar()
 ```
-
-
-
-
-    <matplotlib.colorbar.Colorbar at 0x1994a8755c8>
-
-
-
-
-![png](docs/images/output_11_1.png)
-
 
 We can quickly compare the difference between the desired chaotic properties (positive lyapunov), and the undesirable properties (the boolean divergence) by taking a linear combination such as:
 
@@ -102,17 +77,6 @@ optimizer = normalized_lyapunov - normalized_divergence
 plt.matshow(optimizer)
 plt.colorbar()
 ```
-
-
-
-
-    <matplotlib.colorbar.Colorbar at 0x1994a714288>
-
-
-
-
-![png](docs/images/output_13_1.png)
-
 
 With an appropriate optimizatier we can then begin to assess the appropriate chaogate design
 
