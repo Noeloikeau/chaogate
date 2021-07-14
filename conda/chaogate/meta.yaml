@@ -1,0 +1,32 @@
+package:
+  name: chaogate
+  version: 0.0.1
+source:
+  sha256: ffd4537d7e914199ea87280de16e98db98ba378f7a8310236c0f8312b2cf1f85
+  url: https://files.pythonhosted.org/packages/73/a9/292db2b935d8ccce083560272082b3e5fbac8140d948e494757e0c19863f/chaogate-0.0.1.tar.gz
+about:
+  dev_url: https://Noeloikeau.github.io
+  doc_url: https://Noeloikeau.github.io
+  home: https://Noeloikeau.github.io
+  license: Apache Software
+  license_family: APACHE
+  summary: Chaotic logic simulator in Python.
+build:
+  noarch: python
+  number: '0'
+  script: '{{ PYTHON }} -m pip install . -vv'
+extra:
+  recipe-maintainers:
+  - Noeloikeau
+requirements:
+  host:
+  - pip
+  - python
+  - packaging
+  run:
+  - pip
+  - python
+  - packaging
+test:
+  imports:
+  - chaogate

@@ -1,8 +1,6 @@
 # chaogate
-> Simulations of the 3-MOSFET system known as a `choagate` using `pyspice`. 
+> Simulations of the 3-MOSFET system known as a `choagate` using `pyspice`. This library corresponds to a selection of the code used in *"Chaogate Parameter Optimization using Bayesian Optimization and Genetic Algorithm", “AI for Hardware Security", ISQED’21, 4/7/2020*.
 
-
-This library corresponds to a selection of the code used in *"Chaogate Parameter Optimization using Bayesian Optimization and Genetic Algorithm", “AI for Hardware Security", ISQED’21, 4/7/2020*.
 
 ## Install
 
@@ -42,11 +40,11 @@ plot_sweep(s2,ncurves=10)
     
 
 
-![png](docs/images/output_8_1.png)
+![png](docs/images/output_7_1.png)
 
 
 
-![png](docs/images/output_8_2.png)
+![png](docs/images/output_7_2.png)
 
 
 Once we sweep, we calculate the relevant chaotic properties using `iterate`.
@@ -68,7 +66,7 @@ plot_bifurcate(itr=g.iterate.sel(Vdd=1.2),lya=g.lyapunov.sel(Vdd=1.2))
 ```
 
 
-![png](docs/images/output_11_0.png)
+![png](docs/images/output_10_0.png)
 
 
 ```python
@@ -86,7 +84,7 @@ plt.colorbar()
 
 
 
-![png](docs/images/output_12_1.png)
+![png](docs/images/output_11_1.png)
 
 
 We can quickly compare the difference between the desired chaotic properties (positive $\lambda$), and the undesirable properties (the boolean divergence) by taking a linear combination such as:
@@ -107,7 +105,7 @@ plt.colorbar()
 
 
 
-![png](docs/images/output_14_1.png)
+![png](docs/images/output_13_1.png)
 
 
 With an appropriate optimizatier we can then begin to assess the appropriate chaogate design
