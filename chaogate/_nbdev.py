@@ -18,9 +18,16 @@ index = {"global_path": "00_core.ipynb",
          "booleanize_ar": "00_core.ipynb",
          "booleanize": "00_core.ipynb",
          "boolean_gradient": "00_core.ipynb",
-         "boolean_divergence": "00_core.ipynb"}
+         "boolean_divergence": "00_core.ipynb",
+         "format_equality": "01_plotting.ipynb",
+         "format_label": "01_plotting.ipynb",
+         "axes": "01_plotting.ipynb",
+         "sample_ar": "01_plotting.ipynb",
+         "plot_sweep": "01_plotting.ipynb",
+         "plot_bifurcate": "01_plotting.ipynb"}
 
-modules = ["core.py"]
+modules = ["core.py",
+           "plotting.py"]
 
 doc_url = "https://Noeloikeau.github.io/chaogate/"
 
