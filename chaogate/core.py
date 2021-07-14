@@ -275,8 +275,8 @@ def print_xar(x):
         return res
     data=[f"{s[d].name}: {s[d].shape} : {a_1(s[d])} ... {a_2(s[d])}" for d in var]
     coords=[f"{s[d].name} : {s[d].shape} : {a_1(s[d])} ... {a_2(s[d])}" for d in dim]
-    S='Coordinates:  '+'\n'+'\n'.join(coords)+'\n'
-    S+='Variables  :  '+'\n'+'\n'.join(data)
+    S='Coordinates'+'\n\t'+'\n\t'.join(coords)+'\n'
+    S+='Variables'+'\n\t'+'\n\t'.join(data)
     print(S)
 
 # Cell
