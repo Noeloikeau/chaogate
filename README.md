@@ -1,5 +1,5 @@
 # chaogate
-> Simulations of the 3-MOSFET system known as a `choagate` using `pyspice`. This library corresponds to a selection of the code used in *Chaogate Parameter Optimization using Bayesian Optimization and Genetic Algorithm, AI for Hardware Security, ISQED21, 4/7/2020*.
+> Simulations of the 3-MOSFET system known as a `choagate` using `pyspice`. This library corresponds to a selection of the code used in *Chaogate Parameter Optimization using Bayesian Optimization and Genetic Algorithm, AI for Hardware Security, ISQED21, 4/7/2021*.
 
 
 ## Install
